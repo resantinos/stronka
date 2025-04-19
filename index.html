@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE-ACT SP. Z O.O.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-carousel { 
+            margin-top: 56px;
+            position: relative;
+        }
+        .hero-carousel img { 
+            height: calc(100vh - 56px);
+            object-fit: cover;
+            width: 100%;
+        }
+        .carousel-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            color: white;
+        }
+        .carousel-overlay h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        /* Global divider class */
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: brown;
+            margin: 20px auto;
+        }
+        .carousel-overlay .btn-outline-light {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border-width: 2px;
+        }
+        .gallery img { height: 200px; object-fit: cover; }
+        .contact-form input, .contact-form textarea { margin-bottom: 15px; }
+        .gallery-item {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .modal-dialog.modal-xl {
+            max-width: 90%;
+        }
+        .modal-body img {
+            max-height: 80vh;
+            object-fit: contain;
+        }
+        /* Contact Section Background */
+        #contact {
+            background: url('./images/b1.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+        #contact h2, #contact label, #contact p, #contact a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">RE-ACT SP. Z O.O.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">O nas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+                <!-- Language Switch Buttons -->
+                <div class="ms-3">
+                    <button class="btn btn-outline-light btn-sm me-2" onclick="switchLanguage('pl')">PL</button>
+                    <button class="btn btn-outline-light btn-sm me-2" onclick="switchLanguage('de')">DE</button>
+                    <button class="btn btn-outline-light btn-sm" onclick="switchLanguage('en')">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-carousel">
+        <div class="carousel-overlay">
+            <h1>WITAMY</h1>
+            <div class="divider"></div>
+            <a href="#gallery" class="btn btn-outline-light">Nasze realizacje</a>
+        </div>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/slider/bg1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/bg2.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/bg3.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/bg4.jpg" class="d-block w-100" alt="Slide 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/slider/bg5.jpg" class="d-block w-100" alt="Slide 5">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">O nas</h2>
+            <div class="divider"></div>
+            <p>
+                RE-ACT SP. Z O.O. specjalizuje się w projektowaniu, produkcji i montażu konstrukcji stalowych dla budownictwa i przemysłu. Współpracujemy z deweloperami oraz inwestorami o ustabilizowanej pozycji na rynku polskim i zagranicznym.
+            </p>
+            <p>
+                Nasza oferta zawiera:
+                <ul>
+                    <li>balustrady nierdzewne,</li>
+                    <li>balustrady stalowe cynkowane i malowane proszkowo,</li>
+                    <li>balustrady szklane,</li>
+                    <li>balustrady aluminiowe malowane proszkowe,</li>
+                    <li>konstrukcje stalowe,</li>
+                    <li>daszki, wiaty, itp.</li>
+                </ul>
+            </p>
+            <p>
+                Wieloletnie doświadczenie zdobyte podczas realizacji projektów na rynku polskim i zagranicznym jest gwarantem rzetelnego podejścia do każdego zlecenia.
+            </p>
+            <p>
+                Dysponujemy własnym zapleczem produkcyjnym, ciągły rozwój naszego personelu zapewnia naszym Klientom przemyślane i niezawodne rozwiązania.
+            </p>
+            <p>Zapraszamy do współpracy.</p>
+            <p>Zespół RE-ACT SP. Z O.O.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galeria naszych realizacji</h2>
+            <div class="divider"></div>
+            <div class="row" id="gallery-container">
+                <!-- Gallery items will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals Container -->
+    <div id="modals-container">
+        <!-- Modals will be dynamically generated here -->
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">KONTAKT</h2>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Imię i nazwisko/Nazwa firmy</label>
+                            <input type="text" class="form-control" id="name" placeholder="Wpisz swoje imię lub nazwę firmy" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Wpisz swój e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Wiadomość</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Wpisz swoją wiadomość" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">WYŚLIJ WIADOMOŚĆ</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h5>Dane adresowe:</h5>
+                    <p>RE-ACT SP. Z O.O.</p>
+                    <p>ul. Janowska 18, 81-017 Gdynia</p>
+                    <p>NIP 958-167-25-84</p>
+                    <h5>Dane kontaktowe:</h5>
+                    <p>www: <a href="http://re-act.com.pl" target="_blank">re-act.com.pl</a></p>
+                    <p>e-mail: <a href="mailto:info@re-act.com.pl">info@re-act.com.pl</a></p>
+                    <p>tel.: +48 512 604 476</p>
+                    <div class="mt-3">
+                        <a href="tel:+48512604476" class="btn btn-outline-dark me-2">Telefon</a>
+                        <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-dark me-2">Facebook</a>
+                        <a href="mailto:info@re-act.com.pl" class="btn btn-outline-dark">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2016 RE-ACT SP. Z O.O. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bootstrapCollapse.hide();
+                    }
+                });
+            });
+
+            const products = [
+                { id: 1, thumbnail: './images/Products/produkt_1_min.png', detail: './images/Products/Detail/produkt_1.png', module: './images/Products/Detail/produkt_1_module.png' },
+                { id: 2, thumbnail: './images/Products/produkt_2_min.png', detail: './images/Products/Detail/produkt_2.png', module: './images/Products/Detail/produkt_2_module.png' },
+                { id: 3, thumbnail: './images/Products/produkt_3_min.png', detail: './images/Products/Detail/produkt_3.png', module: './images/Products/Detail/produkt_3_module.png' },
+                { id: 4, thumbnail: './images/Products/produkt_4_min.png', detail: './images/Products/Detail/produkt_4.png', module: './images/Products/Detail/produkt_4_module.png' },
+                { id: 5, thumbnail: './images/Products/produkt_5_min.png', detail: './images/Products/Detail/produkt_5.png', module: './images/Products/Detail/produkt_5_module.png' },
+                { id: 6, thumbnail: './images/Products/produkt_6_min.png', detail: './images/Products/Detail/produkt_6.png', module: './images/Products/Detail/produkt_6_module.png' },
+                { id: 7, thumbnail: './images/Products/produkt_7_min.png', detail: './images/Products/Detail/produkt_7.png', module: './images/Products/Detail/produkt_7_module.png' },
+                { id: 8, thumbnail: './images/Products/produkt_8_min.png', detail: './images/Products/Detail/produkt_8.png', module: './images/Products/Detail/produkt_8_module.png' }
+            ];
+
+            const galleryContainer = document.getElementById('gallery-container');
+            const modalsContainer = document.getElementById('modals-container');
+
+            products.forEach(product => {
+                // Create gallery item
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'col-md-3 mb-3';
+                galleryItem.innerHTML = `
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#productModal${product.id}">
+                        <img src="${product.thumbnail}" class="img-fluid rounded shadow" alt="Product ${product.id}">
+                    </div>
+                `;
+                galleryContainer.appendChild(galleryItem);
+
+                // Create modal
+                const modal = document.createElement('div');
+                modal.className = 'modal fade';
+                modal.id = `productModal${product.id}`;
+                modal.tabIndex = -1;
+                modal.innerHTML = `
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Product ${product.id} Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="${product.detail}" class="img-fluid mb-3" alt="Product ${product.id} Detail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="${product.module}" class="img-fluid mb-3" alt="Product ${product.id} Module">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                modalsContainer.appendChild(modal);
+            });
+        });
+
+        const translations = {
+            pl: {
+                home: "Home",
+                about: "O nas",
+                gallery: "Galeria",
+                contact: "Kontakt",
+                welcome: "WITAMY",
+                realizations: "Nasze realizacje",
+                aboutTitle: "O nas",
+                aboutContent: `
+                    <p>
+                        RE-ACT SP. Z O.O. specjalizuje się w projektowaniu, produkcji i montażu konstrukcji stalowych dla budownictwa i przemysłu. 
+                        Współpracujemy z deweloperami oraz inwestorami o ustabilizowanej pozycji na rynku polskim i zagranicznym.
+                    </p>
+                    <p>
+                        Nasza oferta zawiera:
+                        <ul>
+                            <li>balustrady nierdzewne,</li>
+                            <li>balustrady stalowe cynkowane i malowane proszkowo,</li>
+                            <li>balustrady szklane,</li>
+                            <li>balustrady aluminiowe malowane proszkowe,</li>
+                            <li>konstrukcje stalowe,</li>
+                            <li>daszki, wiaty, itp.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Wieloletnie doświadczenie zdobyte podczas realizacji projektów na rynku polskim i zagranicznym jest gwarantem rzetelnego podejścia do każdego zlecenia.
+                    </p>
+                    <p>
+                        Dysponujemy własnym zapleczem produkcyjnym, ciągły rozwój naszego personelu zapewnia naszym Klientom przemyślane i niezawodne rozwiązania.
+                    </p>
+                    <p>Zapraszamy do współpracy.</p>
+                    <p>Zespół RE-ACT SP. Z O.O.</p>
+                `,
+                galleryTitle: "Galeria naszych realizacji",
+                contactTitle: "KONTAKT",
+                sendMessage: "WYŚLIJ WIADOMOŚĆ",
+                contactForm: {
+                    name: "Imię i nazwisko/Nazwa firmy",
+                    email: "E-mail",
+                    message: "Wiadomość",
+                    placeholders: {
+                        name: "Wpisz swoje imię lub nazwę firmy",
+                        email: "Wpisz swój e-mail",
+                        message: "Wpisz swoją wiadomość"
+                    }
+                },
+                contactDetails: `
+                    <h5>Dane adresowe:</h5>
+                    <p>RE-ACT SP. Z O.O.</p>
+                    <p>ul. Janowska 18, 81-017 Gdynia</p>
+                    <p>NIP 958-167-25-84</p>
+                    <h5>Dane kontaktowe:</h5>
+                    <p>www: <a href="http://re-act.com.pl" target="_blank">re-act.com.pl</a></p>
+                    <p>e-mail: <a href="mailto:info@re-act.com.pl">info@re-act.com.pl</a></p>
+                    <p>tel.: +48 512 604 476</p>
+                `
+            },
+            de: {
+                home: "Startseite",
+                about: "Über uns",
+                gallery: "Galerie",
+                contact: "Kontakt",
+                welcome: "WILLKOMMEN",
+                realizations: "Unsere Projekte",
+                aboutTitle: "Über uns",
+                aboutContent: `
+                    <p>
+                        RE-ACT SP. Z O.O. ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. 
+                        Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.
+                    </p>
+                    <p>
+                        Unser Angebot umfasst:
+                        <ul>
+                            <li>Edelstahlgeländer,</li>
+                            <li>verzinkte und pulverbeschichtete Stahlgeländer,</li>
+                            <li>Glasgeländer,</li>
+                            <li>pulverbeschichtete Aluminiumgeländer,</li>
+                            <li>Stahlkonstruktionen,</li>
+                            <li>Vordächer, Überdachungen usw.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.
+                    </p>
+                    <p>
+                        Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen.
+                    </p>
+                    <p>Wir laden Sie zur Zusammenarbeit ein.</p>
+                `,
+                galleryTitle: "Unsere Galerie",
+                contactTitle: "KONTAKT",
+                sendMessage: "NACHRICHT SENDEN",
+                contactForm: {
+                    name: "Name/Firmenname",
+                    email: "E-Mail",
+                    message: "Nachricht",
+                    placeholders: {
+                        name: "Geben Sie Ihren Namen oder Firmennamen ein",
+                        email: "Geben Sie Ihre E-Mail-Adresse ein",
+                        message: "Geben Sie Ihre Nachricht ein"
+                    }
+                },
+                contactDetails: `
+                    <h5>Adresse:</h5>
+                    <p>RE-ACT SP. Z O.O.</p>
+                    <p>ul. Janowska 18, 81-017 Gdynia</p>
+                    <p>USt-IdNr.: 958-167-25-84</p>
+                    <h5>Kontakt:</h5>
+                    <p>www: <a href="http://re-act.com.pl" target="_blank">re-act.com.pl</a></p>
+                    <p>E-Mail: <a href="mailto:info@re-act.com.pl">info@re-act.com.pl</a></p>
+                    <p>Tel.: +48 512 604 476</p>
+                `
+            },
+            en: {
+                home: "Home",
+                about: "About Us",
+                gallery: "Gallery",
+                contact: "Contact",
+                welcome: "WELCOME",
+                realizations: "Our Projects",
+                aboutTitle: "About Us",
+                aboutContent: `
+                    <p>
+                        RE-ACT SP. Z O.O. specializes in the design, production, and assembly of steel structures for construction and industry. 
+                        We collaborate with developers and investors with an established position in the Polish and international markets.
+                    </p>
+                    <p>
+                        Our offer includes:
+                        <ul>
+                            <li>stainless steel railings,</li>
+                            <li>galvanized and powder-coated steel railings,</li>
+                            <li>glass railings,</li>
+                            <li>powder-coated aluminum railings,</li>
+                            <li>steel structures,</li>
+                            <li>canopies, shelters, etc.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Years of experience gained during project implementation in the Polish and international markets guarantee a reliable approach to every project.
+                    </p>
+                    <p>
+                        We have our own production facilities, and the continuous development of our staff ensures thoughtful and reliable solutions for our clients.
+                    </p>
+                    <p>We invite you to cooperate with us.</p>
+                `,
+                galleryTitle: "Our Gallery",
+                contactTitle: "CONTACT",
+                sendMessage: "SEND MESSAGE",
+                contactForm: {
+                    name: "Name/Company Name",
+                    email: "E-mail",
+                    message: "Message",
+                    placeholders: {
+                        name: "Enter your name or company name",
+                        email: "Enter your email",
+                        message: "Enter your message"
+                    }
+                },
+                contactDetails: `
+                    <h5>Address:</h5>
+                    <p>RE-ACT SP. Z O.O.</p>
+                    <p>ul. Janowska 18, 81-017 Gdynia</p>
+                    <p>VAT ID: 958-167-25-84</p>
+                    <h5>Contact:</h5>
+                    <p>www: <a href="http://re-act.com.pl" target="_blank">re-act.com.pl</a></p>
+                    <p>e-mail: <a href="mailto:info@re-act.com.pl">info@re-act.com.pl</a></p>
+                    <p>tel.: +48 512 604 476</p>
+                `
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.querySelector('.nav-link[href="#home"]').textContent = translations[lang].home;
+            document.querySelector('.nav-link[href="#about"]').textContent = translations[lang].about;
+            document.querySelector('.nav-link[href="#gallery"]').textContent = translations[lang].gallery;
+            document.querySelector('.nav-link[href="#contact"]').textContent = translations[lang].contact;
+
+            document.querySelector('#home h1').textContent = translations[lang].welcome;
+            document.querySelector('#home a').textContent = translations[lang].realizations;
+
+            document.querySelector('#about h2').textContent = translations[lang].aboutTitle;
+            document.querySelector('#about .container').innerHTML = `
+                <h2 class="text-center mb-4">${translations[lang].aboutTitle}</h2>
+                <div class="divider"></div>
+                ${translations[lang].aboutContent}
+            `;
+
+            document.querySelector('#gallery h2').textContent = translations[lang].galleryTitle;
+            document.querySelector('#contact h2').textContent = translations[lang].contactTitle;
+
+            document.querySelector('.contact-form label[for="name"]').textContent = translations[lang].contactForm.name;
+            document.querySelector('.contact-form input#name').placeholder = translations[lang].contactForm.placeholders.name;
+
+            document.querySelector('.contact-form label[for="email"]').textContent = translations[lang].contactForm.email;
+            document.querySelector('.contact-form input#email').placeholder = translations[lang].contactForm.placeholders.email;
+
+            document.querySelector('.contact-form label[for="message"]').textContent = translations[lang].contactForm.message;
+            document.querySelector('.contact-form textarea#message').placeholder = translations[lang].contactForm.placeholders.message;
+
+            document.querySelector('.contact-form button').textContent = translations[lang].sendMessage;
+
+            document.querySelector('#contact .col-md-6:last-child').innerHTML = translations[lang].contactDetails;
+        }
+    </script>
+</body>
+</html>
