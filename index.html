@@ -67,6 +67,42 @@
         #contact h2, #contact label, #contact p, #contact a {
             color: white;
         }
+        .card-deck {
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card {
+            flex: 1;
+            margin: 0;
+            transition: transform 0.3s ease;
+            min-width: 300px; /* Ensures cards don't get too narrow */
+        }
+        @media (max-width: 768px) {
+            .card-deck {
+                flex-direction: column;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+        .card img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .card-body {
+            padding: 1.25rem;
+        }
+        .card-footer {
+            background-color: rgba(0,0,0,.03);
+            padding: .75rem 1.25rem;
+        }
     </style>
 </head>
 <body>
@@ -138,7 +174,7 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">O nas</h2>
             <div class="divider"></div>
@@ -167,6 +203,38 @@
         </div>
     </section>
 
+    <!-- Usługi Section -->
+    <section id="uslugi" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Usługi</h2>
+            <div class="divider"></div>
+            <div class="card-deck">
+                <div class="card">
+                  <img src="./images/deck/deck_1.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Prace montażowe</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+
+                </div>
+                <div class="card">
+                  <img src="./images/deck/deck_2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Ślusarstwo</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="./images/deck/deck_3.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Prace spawalnicze</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+
     <!-- Gallery Section -->
     <section id="gallery" class="py-5">
         <div class="container">
@@ -177,6 +245,8 @@
             </div>
         </div>
     </section>
+
+  
 
     <!-- Modals Container -->
     <div id="modals-container">
