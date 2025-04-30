@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://brocet-balance.de/sitemap.xml
-
+Disallow: /images/certs/
 Disallow: /images/Products/Detail/
-Disallow: /certyfikaty/
+
+Sitemap: https://brocet-balance.de/sitemap.xml
