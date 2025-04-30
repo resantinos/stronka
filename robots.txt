@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://re-act.com.pl/sitemap.xml
+Sitemap: https://brocet-balance.de/sitemap.xml
 
 Disallow: /images/Products/Detail/
 Disallow: /certyfikaty/

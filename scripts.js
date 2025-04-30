@@ -137,9 +137,23 @@ document.addEventListener('DOMContentLoaded', function () {
         row.appendChild(moduleCol);
         modalBody.appendChild(row);
 
+        // Create modal footer
+        const modalFooter = createElementWithAttributes('div', {
+            class: 'modal-footer'
+        });
+
+        const footerCloseButton = createElementWithAttributes('button', {
+            type: 'button',
+            class: 'btn btn-secondary',
+            'data-bs-dismiss': 'modal'
+        });
+        footerCloseButton.textContent = 'Schließen';
+        modalFooter.appendChild(footerCloseButton);
+
         // Assemble modal
         modalContent.appendChild(modalHeader);
         modalContent.appendChild(modalBody);
+        modalContent.appendChild(modalFooter);
         modalDialog.appendChild(modalContent);
         modal.appendChild(modalDialog);
         modalsContainer.appendChild(modal);
@@ -149,11 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const services = [
         {
             id: 1,
-            title: "Prace montażowe",
+            title: "Montagearbeiten",
             images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
             content: [
                 {
-                    text: "RE-ACT SP. Z O.O. ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
+                    text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
                     list: [
                         "Edelstahlgeländer",
                         "verzinkte und pulverbeschichtete Stahlgeländer",
@@ -169,6 +183,50 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             ]
         },
+        {
+            id: 2,
+            title: "Schmiedearbeiten",
+            images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
+            content: [
+                {
+                    text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
+                    list: [
+                        "Edelstahlgeländer",
+                        "verzinkte und pulverbeschichtete Stahlgeländer",
+                        "Glasgeländer",
+                        "pulverbeschichtete Aluminiumgeländer",
+                        "Stahlkonstruktionen",
+                        "Vordächer, Überdachungen usw."
+                    ]
+                },
+                {
+                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
+                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
+                }
+            ]
+        },
+        {
+            id: 3,
+            title: "Stahlkonstruktionen",
+            images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
+            content: [
+                {
+                    text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
+                    list: [
+                        "Edelstahlgeländer",
+                        "verzinkte und pulverbeschichtete Stahlgeländer",
+                        "Glasgeländer",
+                        "pulverbeschichtete Aluminiumgeländer",
+                        "Stahlkonstruktionen",
+                        "Vordächer, Überdachungen usw."
+                    ]
+                },
+                {
+                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
+                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
+                }
+            ]
+        }
         // Add other services here if needed
     ];
 

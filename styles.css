@@ -121,3 +121,48 @@
 #about-us h2, #services h2, #certs h2, #gallery h2 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+/* About Us Section Styles */
+#about-us .card {
+    transition: none;
+}
+
+#about-us .card:hover {
+    transform: none;
+}
+
+#about-us .object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+}
+
+#about-us .bi {
+    color: #6c757d;
+}
+
+#about-us .list-unstyled li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#about-us .list-unstyled li .bi {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+#about-us .card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-us .text-center .d-flex {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#about-us .text-center .small {
+    text-align: left;
+}
