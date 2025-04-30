@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://re-act.com.pl/sitemap.xml
+
+Disallow: /images/Products/Detail/
+Disallow: /certyfikaty/

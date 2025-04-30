@@ -3,134 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="RE-ACT SP. Z O.O. - Ihr Experte für Stahlkonstruktionen, Metallbearbeitung und Schlosserarbeiten in Gdynia. Professionelle Planung, Produktion und Montage.">
+    <meta name="keywords" content="Stahlkonstruktionen, Metallbearbeitung, Schlosserarbeiten, Gdynia, Edelstahlgeländer, Glasgeländer, Überdachungen">
+    <meta name="author" content="RE-ACT SP. Z O.O.">
+    <meta property="og:title" content="RE-ACT SP. Z O.O. - Stahlkonstruktionen & Metallbearbeitung">
+    <meta property="og:description" content="Professionelle Stahlkonstruktionen und Metallbearbeitung in Gdynia. Qualität und Erfahrung seit 2016.">
+    <meta property="og:image" content="https://re-act.com.pl/images/og-image.jpg">
+    <meta property="og:url" content="https://re-act.com.pl">
+    <link rel="canonical" href="https://re-act.com.pl">
+    <!-- Add security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline' 'unsafe-eval'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
     <title>RE-ACT SP. Z O.O.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .hero-carousel { 
-            margin-top: 56px;
-            position: relative;
-        }
-        .hero-carousel img { 
-            height: calc(100vh - 56px);
-            object-fit: cover;
-            width: 100%;
-        }
-        .carousel-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 10;
-            color: white;
-        }
-        .carousel-overlay h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .divider {
-            width: 100px;
-            height: 3px;
-            background: brown;
-            margin: 20px auto;
-        }
-        .carousel-overlay .btn-outline-light {
-            font-size: 1.2rem;
-            padding: 10px 30px;
-            border-width: 2px;
-        }
-        .gallery-item {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-        .modal-dialog.modal-xl {
-            max-width: 90%;
-        }
-        .modal-body img {
-            max-height: 80vh;
-            object-fit: contain;
-        }
-        #contact {
-            background: url('./images/b1.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-        }
-        #contact h2, #contact label, #contact p, #contact a {
-            color: white;
-        }
-        .card-deck {
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card {
-            flex: 1;
-            margin: 0;
-            transition: transform 0.3s ease;
-            min-width: 300px; /* Ensures cards don't get too narrow */
-        }
-        @media (max-width: 768px) {
-            .card-deck {
-                flex-direction: column;
-            }
-            .card {
-                margin-bottom: 20px;
-            }
-        }
-        .card img {
-            height: 250px;
-            object-fit: cover;
-            width: 100%;
-        }
-        .card-body {
-            padding: 1.25rem;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .modal-body {
-            padding: 20px;
-        }
-        .modal-body img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .btn-outline-light:hover {
-            background-color: #ffffff;
-            color: #000000;
-            border-color: #ffffff;
-            text-decoration-color: #000000;
-        }
-        #contact .btn-outline-light:hover {
-            background-color: #ffffff !important;
-            color: #000000 !important;
-            border-color: #ffffff !important;
-        }
-        #contact h2, #contact h3 {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-    
-        #contact p, #contact a {
-         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-        #about-us h2, #services h2, #certs h2, #gallery h2 {
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RE-ACT SP. Z O.O.",
+      "url": "https://re-act.com.pl",
+      "logo": "https://re-act.com.pl/images/logo.png",
+      "description": "Spezialist für Stahlkonstruktionen und Metallbearbeitung",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Janowska 18",
+        "addressLocality": "Gdynia",
+        "postalCode": "81-017",
+        "addressCountry": "PL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+48 512 604 476",
+        "contactType": "customer service",
+        "email": "info@re-act.com.pl"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -398,193 +312,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-
-            navbarLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navbarCollapse.classList.contains('show')) {
-                        const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
-                        bootstrapCollapse.hide();
-                    }
-                });
-            });
-
-            const products = [
-                { id: 1, thumbnail: './images/Products/produkt_1_min.png', detail: './images/Products/Detail/produkt_1.png', module: './images/Products/Detail/produkt_1_module.png' },
-                { id: 2, thumbnail: './images/Products/produkt_2_min.png', detail: './images/Products/Detail/produkt_2.png', module: './images/Products/Detail/produkt_2_module.png' },
-                { id: 3, thumbnail: './images/Products/produkt_3_min.png', detail: './images/Products/Detail/produkt_3.png', module: './images/Products/Detail/produkt_3_module.png' },
-                { id: 4, thumbnail: './images/Products/produkt_4_min.png', detail: './images/Products/Detail/produkt_4.png', module: './images/Products/Detail/produkt_4_module.png' },
-                { id: 5, thumbnail: './images/Products/produkt_5_min.png', detail: './images/Products/Detail/produkt_5.png', module: './images/Products/Detail/produkt_5_module.png' },
-                { id: 6, thumbnail: './images/Products/produkt_6_min.png', detail: './images/Products/Detail/produkt_6.png', module: './images/Products/Detail/produkt_6_module.png' },
-                { id: 7, thumbnail: './images/Products/produkt_7_min.png', detail: './images/Products/Detail/produkt_7.png', module: './images/Products/Detail/produkt_7_module.png' },
-                { id: 8, thumbnail: './images/Products/produkt_8_min.png', detail: './images/Products/Detail/produkt_8.png', module: './images/Products/Detail/produkt_8_module.png' }
-            ];
-
-            const galleryContainer = document.getElementById('gallery-container');
-            const modalsContainer = document.getElementById('modals-container');
-
-            products.forEach(product => {
-                // Create gallery item
-                const galleryItem = document.createElement('div');
-                galleryItem.className = 'col-md-3 mb-3';
-                galleryItem.innerHTML = `
-                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#productModal${product.id}">
-                        <img src="${product.thumbnail}" class="img-fluid rounded shadow" alt="Product ${product.id}">
-                    </div>
-                `;
-                galleryContainer.appendChild(galleryItem);
-
-                // Create modal
-                const modal = document.createElement('div');
-                modal.className = 'modal fade';
-                modal.id = `productModal${product.id}`;
-                modal.tabIndex = -1;
-                modal.innerHTML = `
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Projekt ${product.id}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <img src="${product.detail}" class="img-fluid" alt="Projekt ${product.id} Detail">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <img src="${product.module}" class="img-fluid" alt="Projekt ${product.id} Modul">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                modalsContainer.appendChild(modal);
-            });
-        });
-        // Service data array
-    const services = [
-        {
-            id: 1,
-            title: "Prace montażowe",
-            images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
-            content: [
-                {
-                    text: "RE-ACT SP. Z O.O. ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
-                    list: [
-                        "Edelstahlgeländer",
-                        "verzinkte und pulverbeschichtete Stahlgeländer",
-                        "Glasgeländer",
-                        "pulverbeschichtete Aluminiumgeländer",
-                        "Stahlkonstruktionen",
-                        "Vordächer, Überdachungen usw."
-                    ]
-                },
-                {
-                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
-                }
-            ]
-        },
-        {
-            id: 2,
-            title: "Prace montażowe",
-            images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
-            content: [
-                {
-                    text: "RE-ACT SP. Z O.O. ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
-                    list: [
-                        "Edelstahlgeländer",
-                        "verzinkte und pulverbeschichtete Stahlgeländer",
-                        "Glasgeländer",
-                        "pulverbeschichtete Aluminiumgeländer",
-                        "Stahlkonstruktionen",
-                        "Vordächer, Überdachungen usw."
-                    ]
-                },
-                {
-                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
-                }
-            ]
-        },
-        {
-            id: 3,
-            title: "Prace montażowe",
-            images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
-            content: [
-                {
-                    text: "RE-ACT SP. Z O.O. ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
-                    list: [
-                        "Edelstahlgeländer",
-                        "verzinkte und pulverbeschichtete Stahlgeländer",
-                        "Glasgeländer",
-                        "pulverbeschichtete Aluminiumgeländer",
-                        "Stahlkonstruktionen",
-                        "Vordächer, Überdachungen usw."
-                    ]
-                },
-                {
-                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
-                }
-            ]
-        }
-        // Add other services here
-    ];
-
-    // Generate modals function
-    function generateServiceModals() {
-        const modalsContainer = document.createElement('div');
-        
-        services.forEach(service => {
-            const modal = `
-                <div class="modal fade" id="servmodal${service.id}" tabindex="-1" aria-labelledby="servModal${service.id}Label" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="servModal${service.id}Label">${service.title}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body container-fluid">
-                                <div class="row row-cols-1 row-cols-md-2">
-                                    <div class="col">
-                                        <img src="${service.images[0]}" class="img-fluid mb-3" alt="${service.title}">
-                                        <p>${service.content[0].text}</p>
-                                        ${service.content[0].list ? `
-                                            <p>Unser Angebot umfasst:
-                                                <ul>
-                                                    ${service.content[0].list.map(item => `<li>${item}</li>`).join('')}
-                                                </ul>
-                                            </p>` : ''}
-                                    </div>
-                                    <div class="col">
-                                        <img src="${service.images[1]}" class="img-fluid mb-3" alt="${service.title} extra">
-                                        ${service.content[1].text.map(text => `<p>${text}</p>`).join('')}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            modalsContainer.innerHTML += modal;
-        });
-
-        document.body.appendChild(modalsContainer);
-    }
-
-    // Generate modals on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        generateServiceModals();
-        // ...existing code...
-    });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
