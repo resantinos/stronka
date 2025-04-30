@@ -1,9 +1,9 @@
 .hero-carousel { 
-    margin-top: 56px;
+    margin-top: 48px;  /* Adjust this value to match new navbar height */
     position: relative;
 }
 .hero-carousel img { 
-    height: calc(100vh - 56px);
+    height: calc(100vh - 48px);  /* Adjust this value to match new navbar height */
     object-fit: cover;
     width: 100%;
 }
@@ -209,13 +209,27 @@
 
 .navbar-text {
     text-decoration: none;
-    font-size: 0.8rem;
-    opacity: 0.8;
-    margin-top: -5px;
+    font-size: 0.75rem;
+    margin-top: -3px;
 }
 
 .navbar-text:hover {
     opacity: 1;
+}
+
+.navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.navbar-brand {
+    font-size: 1.1rem;
+    margin-bottom: 0 !important;
+}
+
+.nav-link {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 @media (max-width: 768px) {
@@ -231,6 +245,11 @@
     
     .d-flex.flex-column {
         padding-left: 1rem;
+        align-items: start !important;
+    }
+    
+    .navbar-text {
+        padding-left: 2px;
     }
     
     .navbar-toggler {
