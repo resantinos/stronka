@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             id: 3,
             title: "Schweißarbeiten",
-            images: ["./images/services/s3/1.jpg", "./images/services/s3/1.jpg"],
+            images: ["./images/services/s3/1.jpg", "./images/services/s3/2.jpg"],
             content: [
                 {
                     text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
