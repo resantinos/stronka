@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const services = [
         {
             id: 1,
-            title: "Montagearbeiten",
+            title: "Schlosserarbeiten",
             images: ["./images/services/s1/1.jpg", "./images/services/s1/2.jpg"],
             content: [
                 {
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 2,
-            title: "Schmiedearbeiten",
+            title: "Montagearbeiten",
             images: ["./images/services/s2/1.jpg", "./images/services/s2/2.jpg"],
             content: [
                 {
@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 3,
-            title: "Stahlkonstruktionen",
-            images: ["./images/deck/deck_2.png", "./images/deck/deck_3.png"],
+            title: "Schweißarbeiten",
+            images: ["./images/services/s3/1.jpg", "./images/services/s3/1.jpg"],
             content: [
                 {
                     text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
