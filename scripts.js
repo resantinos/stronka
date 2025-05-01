@@ -1,7 +1,16 @@
 'use strict';
 
 function sanitizeInput(str) {
-    return str.replace(/[^\w. ]/gi, '');
+    if (!str) return '';
+    // Allow more characters while still preventing XSS
+    return str.replace(/[<>]/g, '').trim();
+}
+
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 function createElementWithAttributes(tag, attributes = {}) {
@@ -167,19 +176,22 @@ document.addEventListener('DOMContentLoaded', function () {
             images: ["./images/services/s1/1.jpg", "./images/services/s1/2.jpg"],
             content: [
                 {
-                    text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
+                    texts: [
+                        "Brocet Balance GmbH ist auf die Planung, Herstellung und Montage von Stahlkonstruktionen für Bau und Industrie spezialisiert. Wir arbeiten mit Bauherren und Investoren zusammen, die sich auf dem polnischen und internationalen Markt etabliert haben.",
+                        "Unser Angebot umfasst:"
+                    ],
                     list: [
-                        "Edelstahlgeländer",
+                        "Balustraden aus rostfreiem Stahl",
                         "verzinkte und pulverbeschichtete Stahlgeländer",
-                        "Glasgeländer",
-                        "pulverbeschichtete Aluminiumgeländer",
+                        "Glasscharniere",
+                        "pulverbeschichtete Aluminium-Geländer",
                         "Stahlkonstruktionen",
-                        "Vordächer, Überdachungen usw."
+                        "Vordächer, etc."
                     ]
                 },
                 {
-                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
+                    text: ["Langjährige Erfahrung in der Realisierung von Projekten auf dem polnischen und internationalen Markt garantiert eine zuverlässige Herangehensweise an jedes Projekt.",
+                          "Wir verfügen über eigene Produktionsanlagen und die ständige Weiterbildung unserer Mitarbeiter gewährleistet durchdachte und zuverlässige Lösungen für unsere Kunden."]
                 }
             ]
         },
@@ -189,19 +201,17 @@ document.addEventListener('DOMContentLoaded', function () {
             images: ["./images/services/s2/1.jpg", "./images/services/s2/2.jpg"],
             content: [
                 {
-                    text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
+                    text: "Wir arbeiten  in erster Linie für verschiedene Stahlbau und Metallbauer in ganz Deutschland. Brote Balance GmbH lösen ihr Personalproblem auf verschiedene Arten.",
                     list: [
-                        "Edelstahlgeländer",
-                        "verzinkte und pulverbeschichtete Stahlgeländer",
-                        "Glasgeländer",
-                        "pulverbeschichtete Aluminiumgeländer",
-                        "Stahlkonstruktionen",
-                        "Vordächer, Überdachungen usw."
+                        "gutes praktisch erfahrenen Personal unter der jeweiligen Führung des Auftraggebers.",
+                        "komplettarbeiten eigenverantwortlich mit fachgeschultem Personal unter der Obhut von unseren Obermonteuren sowie Bauleiter."
                     ]
                 },
                 {
-                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
+                    text: ["Somit sind wir in der Lage Bauvorhaben (reine Lohn bzw. Montagekosten) bis 150.000 € abzuwickeln. Arbeiten mit Aluminium, Stahl sowie Glas sind uns geläufig.",
+                          "Wir sind im Bereich der Fernmontage flexibel, das heißt z. B. 10 Tages - Rhythmus zu arbeiten. 1. Woche Montag - Samstag, 2. Woche Montag - Donnerstag. Sollte es allerdings zu Termindruck kommen sind wir auch bereit Sonntagsarbeit auszuführen.",
+                          "Es liegt uns daran eine solide und dauerhafte Geschäftsbeziehung aufzubauen, was bestimmt auch Ihr Interesse ist, deshalb Testen Sie uns. Für weitere Fragen stehen wir Ihnen sehr gerne zur Verfügung."
+                        ]
                 }
             ]
         },
@@ -211,19 +221,18 @@ document.addEventListener('DOMContentLoaded', function () {
             images: ["./images/services/s3/1.jpg", "./images/services/s3/2.jpg"],
             content: [
                 {
-                    text: "Brocet Balance GmbH ist spezialisiert auf die Planung, Produktion und Montage von Stahlkonstruktionen für Bau und Industrie. Wir arbeiten mit Entwicklern und Investoren zusammen, die eine etablierte Position auf dem polnischen und internationalen Markt haben.",
+                    texts: [
+                        "Wir führen Schweißarbeiten für Stahl- und Metallbaubetriebe in ganz Deutschland aus. Die Brote Balance GmbH löst Personalprobleme auf vielfältige Weise."
+                    ],
                     list: [
-                        "Edelstahlgeländer",
-                        "verzinkte und pulverbeschichtete Stahlgeländer",
-                        "Glasgeländer",
-                        "pulverbeschichtete Aluminiumgeländer",
-                        "Stahlkonstruktionen",
-                        "Vordächer, Überdachungen usw."
+                        "Gutes, praxiserfahrenes Personal unter entsprechender Kundenbetreuung.",
+                        "Völlig selbständiges Arbeiten mit fachlich geschultem Personal unter der Aufsicht unserer Obermonteure und Projektleiter."   
                     ]
                 },
                 {
-                    text: ["Langjährige Erfahrung bei der Durchführung von Projekten auf dem polnischen und internationalen Markt garantiert einen zuverlässigen Ansatz für jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen, und die kontinuierliche Entwicklung unseres Personals bietet unseren Kunden durchdachte und zuverlässige Lösungen."]
+                    certText: "Wir haben IWE-zertifiziertes Schweißpersonal. Schweißer sind zertifiziert und methodisch geschult:",
+                    certList: ["WIG", "MIG", "MAG", "MMA"],
+                    text: ["Wir sind bestrebt, eine solide und dauerhafte Geschäftsbeziehung aufzubauen, was sicherlich auch in Ihrem Interesse ist. Sollten Sie weitere Fragen haben, zögern Sie bitte nicht, uns zu kontaktieren."]
                 }
             ]
         }
@@ -248,24 +257,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
             content.innerHTML = `
                 <div class="modal-header">
-                    <h5 class="modal-title">${sanitizeInput(service.title)}</h5>
+                    <h5 class="modal-title">${escapeHtml(service.title)}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="${encodeURI(service.images[0])}" class="img-fluid mb-3" alt="${sanitizeInput(service.title)}">
-                            <p>${sanitizeInput(service.content[0].text)}</p>
+                            <img src="${encodeURI(service.images[0])}" class="img-fluid mb-3" alt="${escapeHtml(service.title)}">
+                            ${service.content[0].texts ? 
+                                service.content[0].texts.map(text => `<p>${escapeHtml(text)}</p>`).join('') : 
+                                service.content[0].text ? `<p>${escapeHtml(service.content[0].text)}</p>` : ''
+                            }
                             ${service.content[0].list ? `
-                                <p>Unser Angebot umfasst:
-                                    <ul>
-                                        ${service.content[0].list.map(item => `<li>${sanitizeInput(item)}</li>`).join('')}
-                                    </ul>
-                                </p>` : ''}
+                                <ul class="list-unstyled">
+                                    ${service.content[0].list.map(item => `<li><i class="bi bi-check2"></i> ${escapeHtml(item)}</li>`).join('')}
+                                </ul>
+                            ` : ''}
                         </div>
                         <div class="col-md-6">
-                            <img src="${encodeURI(service.images[1])}" class="img-fluid mb-3" alt="${sanitizeInput(service.title)} extra">
-                            ${service.content[1].text.map(text => `<p>${sanitizeInput(text)}</p>`).join('')}
+                            <img src="${encodeURI(service.images[1])}" class="img-fluid mb-3" alt="${escapeHtml(service.title)} extra">
+                            ${service.content[1].certText ? `<p>${escapeHtml(service.content[1].certText)}</p>` : ''}
+                            ${service.content[1].certList ? `
+                                <ul class="list-unstyled">
+                                    ${service.content[1].certList.map(item => `<li><i class="bi bi-check2"></i> ${escapeHtml(item)}</li>`).join('')}
+                                </ul>
+                            ` : ''}
+                            ${Array.isArray(service.content[1].text) ? 
+                                service.content[1].text.map(text => `<p>${escapeHtml(text)}</p>`).join('') : 
+                                service.content[1].text ? `<p>${escapeHtml(service.content[1].text)}</p>` : ''
+                            }
                         </div>
                     </div>
                 </div>
