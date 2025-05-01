@@ -177,21 +177,21 @@ document.addEventListener('DOMContentLoaded', function () {
             content: [
                 {
                     texts: [
-                        "Brocet Balance GmbH ist auf die Planung, Herstellung und Montage von Stahlkonstruktionen für Bau und Industrie spezialisiert. Wir arbeiten mit Bauherren und Investoren zusammen, die sich auf dem polnischen und internationalen Markt etabliert haben.",
+                        "Die BroCet Balance GmbH ist auf die Planung, Herstellung und Montage von Stahlkonstruktionen für Bau und Industrie spezialisiert. Wir arbeiten mit Bauherren und Investoren zusammen, die sich auf dem polnischen und internationalen Markt etabliert haben.",
                         "Unser Angebot umfasst:"
                     ],
                     list: [
                         "Balustraden aus rostfreiem Stahl",
-                        "verzinkte und pulverbeschichtete Stahlgeländer",
+                        "Verzinkte und pulverbeschichtete Stahlgeländer",
                         "Glasscharniere",
-                        "pulverbeschichtete Aluminium-Geländer",
+                        "Pulverbeschichtete Aluminium-Geländer",
                         "Stahlkonstruktionen",
-                        "Vordächer, etc."
+                        "Vordächer etc."
                     ]
                 },
                 {
                     text: ["Langjährige Erfahrung in der Realisierung von Projekten auf dem polnischen und internationalen Markt garantiert eine zuverlässige Herangehensweise an jedes Projekt.",
-                          "Wir verfügen über eigene Produktionsanlagen und die ständige Weiterbildung unserer Mitarbeiter gewährleistet durchdachte und zuverlässige Lösungen für unsere Kunden."]
+                          "Wir verfügen über eigene Produktionsanlagen, und die ständige Weiterbildung unserer Mitarbeiter gewährleistet durchdachte und zuverlässige Lösungen für unsere Kunden."]
                 }
             ]
         },
@@ -202,19 +202,18 @@ document.addEventListener('DOMContentLoaded', function () {
             content: [
                 {
                     texts: [
-                        "Wir arbeiten in erster Linie für verschiedene Stahlbau und Metallbauer in ganz Deutschland.",
-                        "BroCet Balance GmbH lösen ihr Personalproblem auf verschiedene Arten:"
+                        "Wir arbeiten in erster Linie für verschiedene Stahlbau- und Metallbauunternehmen in ganz Deutschland.",
+                        "Die BroCet Balance GmbH löst Ihr Personalproblem auf verschiedene Arten:"
                     ],
                     list: [
-                        "gutes praktisch erfahrenen Personal unter der jeweiligen Führung des Auftraggebers.",
-                        "komplettarbeiten eigenverantwortlich mit fachgeschultem Personal unter der Obhut von unseren Obermonteuren sowie Bauleiter."
+                        "Gutes, praxiserfahrenes Personal unter der jeweiligen Führung des Auftraggebers",
+                        "Komplettarbeiten eigenverantwortlich mit fachgeschultem Personal unter der Obhut unserer Obermonteure sowie Bauleiter"
                     ]
                 },
                 {
-                    text: ["Somit sind wir in der Lage Bauvorhaben (reine Lohn bzw. Montagekosten) bis 150.000 € abzuwickeln. Arbeiten mit Aluminium, Stahl sowie Glas sind uns geläufig.",
-                          "Wir sind im Bereich der Fernmontage flexibel, das heißt z. B. 10 Tages - Rhythmus zu arbeiten. 1. Woche Montag - Samstag, 2. Woche Montag - Donnerstag. Sollte es allerdings zu Termindruck kommen sind wir auch bereit Sonntagsarbeit auszuführen.",
-                          "Es liegt uns daran eine solide und dauerhafte Geschäftsbeziehung aufzubauen, was bestimmt auch Ihr Interesse ist, deshalb Testen Sie uns. Für weitere Fragen stehen wir Ihnen sehr gerne zur Verfügung."
-                    ]
+                    text: ["Somit sind wir in der Lage, Bauvorhaben (reine Lohn- bzw. Montagekosten) bis 150.000 € abzuwickeln. Arbeiten mit Aluminium, Stahl sowie Glas sind uns geläufig.",
+                          "Wir sind im Bereich der Fernmontage flexibel, das heißt z.B. 10-Tages-Rhythmus zu arbeiten: 1. Woche Montag - Samstag, 2. Woche Montag - Donnerstag. Sollte es allerdings zu Termindruck kommen, sind wir auch bereit, Sonntagsarbeit auszuführen.",
+                          "Es liegt uns daran, eine solide und dauerhafte Geschäftsbeziehung aufzubauen, was bestimmt auch in Ihrem Interesse ist. Testen Sie uns! Für weitere Fragen stehen wir Ihnen sehr gerne zur Verfügung."]
                 }
             ]
         },
@@ -229,12 +228,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         "Die BroCet Balance GmbH löst Personalprobleme auf vielfältige Weise:"
                     ],
                     list: [
-                        "gutes, praxiserfahrenes Personal unter entsprechender Kundenbetreuung.",
-                        "völlig selbständiges Arbeiten mit fachlich geschultem Personal unter der Aufsicht unserer Obermonteure und Projektleiter."   
+                        "Gutes, praxiserfahrenes Personal unter entsprechender Kundenbetreuung",
+                        "Völlig selbstständiges Arbeiten mit fachlich geschultem Personal unter der Aufsicht unserer Obermonteure und Projektleiter"   
                     ]
                 },
                 {
-                    certText: "Wir haben IWE-zertifiziertes Schweißpersonal. Schweißer sind zertifiziert und methodisch geschult:",
+                    certText: "Wir haben IWE-zertifiziertes Schweißpersonal. Unsere Schweißer sind zertifiziert und methodisch geschult in:",
                     certList: ["WIG", "MIG", "MAG", "MMA"],
                     text: ["Wir sind bestrebt, eine solide und dauerhafte Geschäftsbeziehung aufzubauen, was sicherlich auch in Ihrem Interesse ist. Sollten Sie weitere Fragen haben, zögern Sie bitte nicht, uns zu kontaktieren."]
                 }
