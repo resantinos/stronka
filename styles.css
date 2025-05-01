@@ -208,6 +208,17 @@
     text-align: left;
 }
 
+/* Leistungsumfang Section - No Hover Effects */
+#about-us .bg-light.card {
+    transition: none;
+    box-shadow: none;
+}
+
+#about-us .bg-light.card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 .navbar-text {
     text-decoration: none;
     font-size: 0.75rem;

@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         "Unser Angebot umfasst:"
                     ],
                     list: [
-                        "Balustraden aus rostfreiem Stahl",
+                        "Balustraden aus Edelstahl",
                         "Verzinkte und pulverbeschichtete Stahlgeländer",
                         "Glasscharniere",
                         "Pulverbeschichtete Aluminium-Geländer",
