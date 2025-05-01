@@ -201,7 +201,10 @@ document.addEventListener('DOMContentLoaded', function () {
             images: ["./images/services/s2/1.jpg", "./images/services/s2/2.jpg"],
             content: [
                 {
-                    text: "Wir arbeiten  in erster Linie für verschiedene Stahlbau und Metallbauer in ganz Deutschland. Brote Balance GmbH lösen ihr Personalproblem auf verschiedene Arten.",
+                    texts: [
+                        "Wir arbeiten in erster Linie für verschiedene Stahlbau und Metallbauer in ganz Deutschland.",
+                        "BroCet Balance GmbH lösen ihr Personalproblem auf verschiedene Arten:"
+                    ],
                     list: [
                         "gutes praktisch erfahrenen Personal unter der jeweiligen Führung des Auftraggebers.",
                         "komplettarbeiten eigenverantwortlich mit fachgeschultem Personal unter der Obhut von unseren Obermonteuren sowie Bauleiter."
@@ -211,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: ["Somit sind wir in der Lage Bauvorhaben (reine Lohn bzw. Montagekosten) bis 150.000 € abzuwickeln. Arbeiten mit Aluminium, Stahl sowie Glas sind uns geläufig.",
                           "Wir sind im Bereich der Fernmontage flexibel, das heißt z. B. 10 Tages - Rhythmus zu arbeiten. 1. Woche Montag - Samstag, 2. Woche Montag - Donnerstag. Sollte es allerdings zu Termindruck kommen sind wir auch bereit Sonntagsarbeit auszuführen.",
                           "Es liegt uns daran eine solide und dauerhafte Geschäftsbeziehung aufzubauen, was bestimmt auch Ihr Interesse ist, deshalb Testen Sie uns. Für weitere Fragen stehen wir Ihnen sehr gerne zur Verfügung."
-                        ]
+                    ]
                 }
             ]
         },
@@ -222,11 +225,12 @@ document.addEventListener('DOMContentLoaded', function () {
             content: [
                 {
                     texts: [
-                        "Wir führen Schweißarbeiten für Stahl- und Metallbaubetriebe in ganz Deutschland aus. Die Brote Balance GmbH löst Personalprobleme auf vielfältige Weise."
+                        "Wir führen Schweißarbeiten für Stahl- und Metallbaubetriebe in ganz Deutschland aus.",
+                        "Die BroCet Balance GmbH löst Personalprobleme auf vielfältige Weise:"
                     ],
                     list: [
-                        "Gutes, praxiserfahrenes Personal unter entsprechender Kundenbetreuung.",
-                        "Völlig selbständiges Arbeiten mit fachlich geschultem Personal unter der Aufsicht unserer Obermonteure und Projektleiter."   
+                        "gutes, praxiserfahrenes Personal unter entsprechender Kundenbetreuung.",
+                        "völlig selbständiges Arbeiten mit fachlich geschultem Personal unter der Aufsicht unserer Obermonteure und Projektleiter."   
                     ]
                 },
                 {
